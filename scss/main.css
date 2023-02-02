@@ -1,0 +1,117 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: inherit;
+}
+
+.perfume-card {
+  font-family: "Montserrat";
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  font-weight: 500;
+  max-width: 600px;
+  min-width: 350px;
+  max-height: 500px;
+}
+@media screen and (max-width: 600px) {
+  .perfume-card {
+    flex-direction: column;
+  }
+  .perfume-card__img, .perfume-card__content {
+    width: 100% !important;
+  }
+  .perfume-card__img {
+    height: 300px;
+  }
+}
+.perfume-card__img {
+  overflow: hidden;
+  width: 50%;
+  background: url("../../images/image-product-desktop.jpg") center no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.perfume-card__content {
+  width: 50%;
+  padding: 20px;
+  background-color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.perfume-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.perfume-card__header .header__pre-title {
+  color: hsl(228deg, 12%, 48%);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.perfume-card__header .header__title {
+  font-size: clamp(1.875rem, 1.743rem + 0.5634vw, 2.25rem);
+  line-height: 1;
+  color: hsl(212deg, 21%, 14%);
+  font-family: "Fraunces";
+}
+.perfume-card__description {
+  color: hsl(228deg, 12%, 48%);
+}
+.perfume-card__price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.perfume-card__price .price__new {
+  font-size: clamp(1.625rem, 1.4049rem + 0.939vw, 2.25rem);
+  font-weight: 500;
+  font-family: "Fraunces";
+  color: hsl(158deg, 36%, 37%);
+}
+.perfume-card__price .price__old {
+  color: hsl(228deg, 12%, 48%);
+  text-decoration: line-through;
+  -webkit-text-decoration-color: hsl(228deg, 12%, 48%);
+          text-decoration-color: hsl(228deg, 12%, 48%);
+}
+.perfume-card__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 18px 20px;
+  border-radius: 8px;
+  width: 100%;
+  background-color: hsl(158deg, 36%, 37%);
+  color: hsl(0deg, 0%, 100%);
+  transition: all 200ms;
+}
+.perfume-card__btn:hover {
+  background-color: #1c3b30;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 14px;
+  background-color: hsl(30deg, 38%, 92%);
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,99 @@
+.perfume-card {
+    font-family: $ff-Montserrat;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    font-weight: 500;
+    max-width: 600px;
+    min-width: 350px;
+    max-height: 500px;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+
+        &__img,
+        &__content {
+            width: 100% !important;
+        }
+
+        &__img {
+            height: 300px;
+        }
+    }
+    &__img {
+        overflow: hidden;
+        width: 50%;
+        background: url('../../images/image-product-desktop.jpg') center no-repeat;
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    &__content {
+        width: 50%;
+        padding: 20px;
+        background-color: $clr-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .header__pre-title {
+            color: $clr-dark-grayish-blue;
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+        }
+
+        .header__title {
+            // font-size: 36px;
+            font-size: clamp(1.875rem, 1.743rem + 0.5634vw, 2.25rem);
+            line-height: 1;
+            color: $clr-very-dark-blue;
+            font-family: $ff-Fraunces;
+        }
+    }
+
+    &__description {
+        color: $clr-dark-grayish-blue;
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .price__new {
+            font-size: clamp(1.625rem, 1.4049rem + 0.939vw, 2.25rem);
+            font-weight: 500;
+            font-family: $ff-Fraunces;
+            color: $clr-dark-cyan;
+        }
+
+        .price__old {
+            color: $clr-dark-grayish-blue;
+            text-decoration: line-through;
+            text-decoration-color: $clr-dark-grayish-blue;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        padding: 18px 20px;
+        border-radius: 8px;
+        width: 100%;
+        background-color: $clr-dark-cyan;
+        color: $clr-white;
+
+        transition: all 200ms;
+        &:hover {
+            background-color: darken($color: $clr-dark-cyan, $amount: 20%);
+        }
+    }
+}

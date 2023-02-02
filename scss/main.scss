@@ -1,0 +1,16 @@
+// Utils
+@import './utils/reset';
+@import './utils/vars';
+// Components
+@import './components/perfume-card';
+
+body {
+    font-family: $ff-Montserrat;
+    font-size: 14px;
+    background-color: $clr-cream;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
